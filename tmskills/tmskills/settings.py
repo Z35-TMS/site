@@ -37,6 +37,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "home",
+    "user",
+    "item",
+    "backet",
 ]
 
 MIDDLEWARE = [
@@ -126,4 +130,4 @@ STATIC_URL = "/static/"
 MEDIA_ROOT = BASE_DIR / "tmskills" / "media"
 
 
-AUTH_USER_MODEL = "user.models.TmsUser"
+AUTH_USER_MODEL = "user.User"

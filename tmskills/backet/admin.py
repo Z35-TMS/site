@@ -1,3 +1,9 @@
 from django.contrib import admin
+from backet.models import Bucket
 
-# Register your models here.
+
+class AdminBucket(admin.ModelAdmin):
+    list_display = ["user", "item"]
+
+
+admin.site.register(Bucket, AdminBucket)
