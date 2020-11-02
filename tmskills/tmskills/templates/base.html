@@ -25,7 +25,9 @@
   <link rel="stylesheet" href="{% static 'base/css/bootstrap.css' %}">
 
   <link rel="stylesheet" href="{% static 'base/css/mobster.css' %}">
+  {% block styles %}{% endblock styles %}
 
+  {% block top_scripts %}{% endblock top_scripts %}
 </head>
 <body>
 
@@ -56,7 +58,7 @@
             <a class="nav-link" href="updates.html">What's New</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="contact.html">Contact</a>
+            <a class="nav-link" href="{% url 'contacts_page' %}">Contact</a>
           </li>
         </ul>
         <div class="ml-auto my-2 my-lg-0">
@@ -67,7 +69,7 @@
   </nav>
 
 {% block home_page %}{% endblock home_page %}
-
+{% block contacts %}{% endblock contacts %}
 
 <script src="{% static 'base/js/jquery-3.5.1.min.js' %}"></script>
 
@@ -78,6 +80,6 @@
 <script src="{% static 'base/js/wow.min.js' %}"></script>
 
 <script src="{% static 'base/js/mobster.js' %}"></script>
-
+{% block scripts %}{% endblock scripts %}
 </body>
 </html>
